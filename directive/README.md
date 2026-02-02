@@ -38,6 +38,32 @@
 - 예: `v-for="item in items"` → items 배열의 각 항목마다 한 번씩 렌더링
 - 리스트를 만들 때 가장 많이 사용
 
+### v-for 문법 정리 ([List Rendering](https://vuejs.org/guide/essentials/list.html))
+
+| 문법 | 설명 | 예시 |
+|------|------|------|
+| `item in items` | 배열 반복 | `v-for="hobby in hobbies"` |
+| `(item, index) in items` | 인덱스도 함께 사용 | `v-for="(hobby, i) in hobbies"` |
+| `value in object` | 객체의 값 반복 | `v-for="value in myObject"` |
+| `(value, key) in object` | 객체의 키와 값 | `v-for="(value, key) in myObject"` |
+| `n in 10` | 1부터 10까지 숫자 반복 | `v-for="n in 10"` → 1,2,3...10 |
+
+### :key (필수에 가깝게 쓰기)
+
+- `v-for`로 그릴 때 **각 항목을 구분**하기 위해 `:key`를 붙임
+- Vue가 요소를 추적해서 **재사용·정렬**을 올바르게 함
+- `:key="item.id"` 처럼 **고유한 값** (문자열, 숫자)을 써야 함. 객체는 X
+
+### v-for와 v-if 같이 쓸 때
+
+- **같은 요소에** `v-for`와 `v-if`를 같이 쓰면 안 됨 (v-if가 먼저 적용됨)
+- **해결**: `<template v-for="...">`로 감싼 뒤, 안쪽에 `v-if` 붙이기
+- **필터링**이 필요하면 `computed`로 필터된 배열을 만든 뒤 `v-for`에 넣기
+
+### 참고 링크
+
+- [List Rendering](https://vuejs.org/guide/essentials/list.html)
+
 ---
 
 ## 이벤트 / 속성 바인딩
