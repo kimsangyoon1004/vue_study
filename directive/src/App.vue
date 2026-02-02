@@ -13,6 +13,7 @@ export default {
       age: 10,
       hobbies: ["baseball", "tennis", "soccer"],
       count: 0,
+      iconPath: '/favicon.ico',
     }
   },
 }
@@ -60,6 +61,12 @@ export default {
     <button @click="age++">나이 증가</button>
     <button @click="age--">나이 감소</button>
   </div>
+
+  <div>
+    <img src="/basketball.webp">
+    <img :src="iconPath">
+  </div>
+
 </template>
 
 <style scoped></style>
