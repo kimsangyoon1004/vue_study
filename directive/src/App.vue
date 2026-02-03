@@ -14,6 +14,7 @@ export default {
       hobbies: ["baseball", "tennis", "soccer"],
       count: 0,
       iconPath: '/favicon.ico',
+      your_name: "",
     }
   },
 }
@@ -67,6 +68,14 @@ export default {
     <img :src="iconPath">
   </div>
 
+  <div>
+    <form>
+      <p>당신의 이름은?</p>
+      <br>
+      <input v-model="your_name">
+      <p>{{  your_name }}</p>
+    </form>
+  </div>
 </template>
 
 <style scoped></style>
