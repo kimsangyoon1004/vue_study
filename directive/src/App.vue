@@ -15,8 +15,23 @@ export default {
       count: 0,
       iconPath: '/favicon.ico',
       your_name: "",
+      agree: false,
+      itemName: null,
+      itemCnt: 1,
+      sList: [
+        {name: '감귤', cnt: 2}
+      ]
     }
   },
+  methods: {
+    addItem(){
+      let item = {
+        name: this.itemName,
+        cnt: this.itemCnt
+      }
+      this.sList.push(item);
+    }
+  }
 }
 </script>
 
@@ -74,8 +89,27 @@ export default {
       <br>
       <input v-model="your_name">
       <p>{{  your_name }}</p>
+      <p>이 약관에 동의하십니까?</p>
+      <input type="checkbox" v-model="agree"><br>
+      {{ agree }}
     </form>
   </div>
+
+  <form v-on:submit.prevent="addItem">
+    <p>품목: <input type="text" required v-model="itemName"></p>
+    <p>수량: <select v-model="itemCnt">
+      <option value="1"> 1개 </option>
+      <option value="2"> 2개 </option>
+      <option value="3"> 3개 </option>
+      <option value="4"> 4개 </option>
+      <option value="5"> 5개 </option>
+    </select></p>
+    <button type="submit"> 상품추가 </button>
+  </form>
+  <p> 구입할 품목: </p>
+  <ul>
+    <li v-for="item in sList">{{ item.name }} {{ item.cnt }}</li>
+  </ul>
 </template>
 
 <style scoped></style>
