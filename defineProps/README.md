@@ -1,38 +1,11 @@
-# .
+# defineProps - 부모 → 자식 데이터 전달
 
-This template should help get you started developing with Vue 3 in Vite.
+## 이 폴더에서 다루는 것
 
-## Recommended IDE Setup
+- **defineProps** : 자식 컴포넌트가 부모로부터 받을 "props" 를 선언
+- 부모: `<Child :title="post.title" />` → 자식: `props.title` 로 사용
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 핵심
 
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+- 부모는 **:속성명="값"** 으로 넘기고, 자식은 **defineProps(['title', ...])** 또는 **defineProps({ title: { type: String, required: true } })** 로 받음
+- props 는 읽기 전용. 자식에서 바꾸면 안 됨

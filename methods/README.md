@@ -1,38 +1,11 @@
-# .
+# methods - Options API에서 함수 정의
 
-This template should help get you started developing with Vue 3 in Vite.
+## 이 폴더에서 다루는 것
 
-## Recommended IDE Setup
+- **methods** : 컴포넌트에서 쓸 함수들을 정의
+- template 에서 `{{ greeting() }}` 처럼 호출하거나, `@click="increment"` 처럼 이벤트에 연결
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 핵심
 
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+- `this.userName1` 처럼 data 에 접근할 때는 `this` 사용
+- 클릭 시 실행만 할 때는 `@click="increment"` (괄호 없이 메서드 이름만)

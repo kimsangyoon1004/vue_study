@@ -1,38 +1,11 @@
-# .
+# v-bind 로 class 동적 바인딩
 
-This template should help get you started developing with Vue 3 in Vite.
+## 이 폴더에서 다루는 것
 
-## Recommended IDE Setup
+- **:class="변수"** : data(또는 ref) 값에 따라 적용되는 class 를 바꿈
+- 클릭 등으로 변수만 바꿔도 스타일이 바뀜
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 핵심
 
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+- `:class="titleClass"` → titleClass 가 `''` 이면 class 없음, `'title'` 이면 `.title` 스타일 적용
+- 여러 class 를 조건부로 줄 때는 객체/배열 문법도 있음 (Vue 문서 참고)

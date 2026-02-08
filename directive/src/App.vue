@@ -78,9 +78,12 @@ export default {
     <button @click="age--">나이 감소</button>
   </div>
 
+  <!-- ========== 5. v-bind (: ) : 속성에 data 연결 ========== -->
   <div>
-    <img src="/basketball.webp">
-    <img :src="iconPath">
+    <!-- 일반 HTML: src에 고정 경로 -->
+    <img src="/basketball.webp" alt="basketball">
+    <!-- v-bind:src (또는 :src) : data의 iconPath 값을 src에 넣음. data가 바뀌면 이미지도 바뀜 -->
+    <img :src="iconPath" alt="icon">
   </div>
 
   <div>

@@ -1,38 +1,11 @@
-# .
+# computed - 계산된 값
 
-This template should help get you started developing with Vue 3 in Vite.
+## 이 폴더에서 다루는 것
 
-## Recommended IDE Setup
+- **computed(함수)** : 다른 반응형 값에 의존하는 "계산된 값"
+- 의존하는 값이 바뀔 때만 다시 계산되고, 결과는 캐시됨
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## methods vs computed
 
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+- **methods** : 호출할 때마다 실행
+- **computed** : 의존성만 바뀔 때만 다시 계산 → 같은 값을 여러 번 써도 한 번만 계산

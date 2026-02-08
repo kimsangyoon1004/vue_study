@@ -1,38 +1,11 @@
-# .
+# watch 옵션 - immediate, deep
 
-This template should help get you started developing with Vue 3 in Vite.
+## 이 폴더에서 다루는 것
 
-## Recommended IDE Setup
+- **immediate: true** : 마운트 직후에 콜백을 한 번 바로 실행 (초기값도 감지)
+- **deep: true** : 객체 안의 속성이 바뀌어도 감지 (ref/reactive 객체 내부 변경)
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 사용 예
 
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+- `immediate` : 처음 로드 시에도 한 번 실행해야 할 때
+- `deep` : `ref({ name, age })` 같은 객체의 `name` 이 바뀌는 것까지 감지할 때

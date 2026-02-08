@@ -1,38 +1,14 @@
-# .
+# 이벤트 수정자 (Event Modifier)
 
-This template should help get you started developing with Vue 3 in Vite.
+## 이 폴더에서 다루는 것
 
-## Recommended IDE Setup
+- **.once** : 해당 이벤트를 한 번만 실행 (두 번째부터 무시)
+- **.prevent** : `event.preventDefault()` (기본 동작 막기, 예: form 제출)
+- **.stop** : `event.stopPropagation()` (버블링 막기)
+- **키 수정자** : `.enter`, `.s` 등 → 해당 키를 눌렀을 때만 핸들러 실행
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 예시
 
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+- `@click.once="fn"` → 클릭은 한 번만
+- `@submit.prevent="fn"` → form 제출 시 페이지 이동 안 함
+- `@keydown.enter="fn"` → Enter 키 눌렀을 때만
